@@ -33,12 +33,3 @@ class UserResponseSchema(UserBaseSchema):
 class UserResponse(BaseModel):
     status: str
     user: UserResponseSchema
-
-
-
-class ATMResponseSchema(BaseModel):
-    agency: str
-    name: str
-    location: dict
-    has_money: bool
-    reviews: int
