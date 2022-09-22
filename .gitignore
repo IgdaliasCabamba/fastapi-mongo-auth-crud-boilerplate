@@ -1,0 +1,8 @@
+**.settings
+**.deta
+**.env
+**/pyenv
+**tests
+**__pycache__
+**.pyo
+**.pyi

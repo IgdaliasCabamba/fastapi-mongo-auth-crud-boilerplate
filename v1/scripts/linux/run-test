@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+if [[ -z "${VIRTUAL_ENV}" ]]; then
+  source pyenv/bin/activate
+fi
+
+pytest

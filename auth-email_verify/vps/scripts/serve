@@ -1,8 +1,0 @@
-#! /usr/bin/bash
-
-cd ~/projects/akumbu
-source kenv/bin/activate
-
-#uvicorn src.main:app --reload
-
-python run-server.py

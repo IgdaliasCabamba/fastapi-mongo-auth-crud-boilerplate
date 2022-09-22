@@ -1,2 +1,0 @@
-# akumbu
-akumbu backend

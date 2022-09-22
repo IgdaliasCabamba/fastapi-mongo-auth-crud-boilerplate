@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+RUNFILE=./run-server.py
+PYENVDIR=pyenv
+
+if [ -d "$PYENVDIR" ]; then
+    
+    if [[ -z "${VIRTUAL_ENV}" ]]; then
+        source $PYENVDIR/bin/activate
+    fi
+
+    if [ -f "$RUNFILE" ]; then
+        python $RUNFILE
+    else 
+        uvicorn src.main:app --host "0.0.0.0" --port 8080 --log-level info --reload
+    fi
+fi

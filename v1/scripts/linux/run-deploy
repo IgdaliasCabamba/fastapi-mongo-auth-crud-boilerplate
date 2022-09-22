@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+if [[ -z "${VIRTUAL_ENV}" ]]; then
+  source pyenv/bin/activate
+fi
+
+if [ -z "$1" ]
+  then
+    echo "No commit message supplied"
+    exit 1
+
+elif [ -z "$2" ]
+  then
+    echo "No version supplied"
+    exit 1
+
+else
+    pip freeze > requirements.txt
+    git add .
+    git commit -m "$1"
+    git push
+    mike deploy --push "$2"
+fi
